@@ -5,7 +5,7 @@
 <div id="top" align="left">
 
 [![Gradio Demo](https://img.shields.io/badge/Gradio-Demo-orange?style=flat&logo=gradio)](#)
-[![doc](https://img.shields.io/badge/Document-FFA500?logo=readthedocs&logoColor=white)](#)
+[![doc](https://img.shields.io/badge/Document-FFA500?logo=readthedocs&logoColor=white)](https://internrobotics.github.io/user_guide/internmanip/)
 [![GitHub star chart](https://img.shields.io/github/stars/InternRobotics/InternManip?style=square)](#)
 [![GitHub Issues](https://img.shields.io/github/issues/InternRobotics/InternManip)](#)
 <a href="https://cdn.vansin.top/taoyuan.jpg"><img src="https://img.shields.io/badge/WeChat-07C160?logo=wechat&logoColor=white" height="20" style="display:inline"></a>
@@ -101,8 +101,8 @@ An **All-in-one** Robot Manipulation Learning Suite for Polcy Models Training an
 - [🔥 News](#-news)
 - [📋 Table of Contents](#-table-of-contents)
 - [🚀 Getting Started](#-getting-started)
-- [📚 Documentation \& Tutorial (WIP)](#-documentation--tutorial-wip)
-- [📦 Benchmarks \& Baselines](#-benchmarks--baselines)
+- [📚 Documentation \& Tutorial](#-documentation--tutorial-wip)
+- [📦 Benchmarks \& Baselines](#-benchmarks--baselines-wip)
 - [🔧 Support](#-support)
 - [👥 Contribute](#-contribute)
 - [🔗 Citation](#-citation)
@@ -194,16 +194,16 @@ The GPU requirements for model running and simulation are different, as shown in
 
 ### Installation
 
-We provide the installation guide [here](https://internmanip.github.io/usage/get_started/installation.html). You can install locally or use docker and verify the installation easily.
+We provide the installation guide [here](https://internrobotics.github.io/user_guide/internmanip/quick_start/installation). You can install locally or use docker and verify the installation easily.
 
 
 ## 📚 Documentation \& Tutorial (WIP)
 
-We provide detailed [docs](https://internmanip.github.io) for the basic usage of different modules supported in InternManip. Here are some shortcuts to common scenarios:
-- [How to train and evaluate a model?](https://internmanip.github.io/usage/get_started/quick_start.html)
-- [How to customize your model?](https://internmanip.github.io/usage/tutorials/how_to)
-- [How to import a new dataset?](https://internmanip.github.io/usage/tutorials/how_to)
-- [How to import a new benchmark?](https://internmanip.github.io/usage/get_started/run-benchmark-baseline.html)
+We provide detailed [docs](https://internrobotics.github.io/user_guide/internmanip/quick_start/) for the basic usage of different modules supported in InternManip. Here are some shortcuts to common scenarios:
+- [How to train and evaluate a model?](https://internrobotics.github.io/user_guide/internmanip/quick_start/train_eval)
+- [How to customize your model?](https://internrobotics.github.io/user_guide/internmanip/quick_start/add_model)
+- [How to import a new dataset?](https://internrobotics.github.io/user_guide/internmanip/quick_start/add_dataset)
+- [How to import a new benchmark?](https://internrobotics.github.io/user_guide/internmanip/quick_start/add_benchmark)
 
 Welcome to try and post your suggestions!
 
@@ -257,7 +257,7 @@ Join our [WeChat](https://cdn.vansin.top/taoyuan.jpg) support group or [Discord]
 
 ## 👥 Contribute
 
-If you would like to contribute to InternManip, please check out our [contribution guide]().
+If you would like to contribute to InternManip, please check out our [contribution guide](https://internrobotics.github.io/user_guide/internmanip/contribute).
 For example, raising issues, fixing bugs in the framework, and adapting or adding new policies and data to the framework.
 
 
@@ -305,8 +305,8 @@ The open-sourced data are under the <a rel="license" href="http://creativecommon
 Other datasets (including Calvin and Simpler) inherit their own distribution licenses.
 
 ## 👏 Acknowledgements
-- [CALVIN](#): A synthetic benchmark for training and evaluating robotic manipulation policies.
-- [Simpler-Env](#): A real-sim consistent manipulation benchmark for evaluating robotic manipulation policies.
+- [CALVIN](https://github.com/mees/calvin): A synthetic benchmark for training and evaluating robotic manipulation policies.
+- [Simpler-Env](https://github.com/simpler-env/SimplerEnv): A real-sim consistent manipulation benchmark for evaluating robotic manipulation policies.
 - [Isaac GR00T](https://github.com/NVIDIA/Isaac-GR00T): This codebase is developed on top of the Isaac GR00T framework, with substantial restructuring and customization to better suit our experimental needs.
 - [LeRobot](https://github.com/huggingface/lerobot): The data format used in this project largely follows the conventions of LeRobot.
 - [InternUtopia](https://github.com/OpenRobotLab/GRUtopia) (Previously `GRUtopia`): The evaluation on GenManip relies on the InternUtopia platform.
