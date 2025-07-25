@@ -6,9 +6,9 @@ eval_cfg = EvalCfg(
     eval_type="genmanip",
     agent=AgentCfg(
         agent_type="gr00t_n15_genmanip",
-        model_name_or_path="/oss-yeqianyu/models/gr00t-n15-Google-bs16-node2-acc8-float32-max40k/checkpoint-40000",
+        model_name_or_path="/PATH/TO/YOUR/GR00T_N15_FINETUNED_CHECKPOINT",
         agent_settings={
-            "dataset_path": "/oss-yeqianyu/datasets/Genmanip-mini",
+            "dataset_path": "/PATH/TO/YOUR/Genmanip-mini",
             "data_config": "genmanip",
             "embodiment_tag": "gr1",
             "video_backend": "decord",
@@ -24,9 +24,9 @@ eval_cfg = EvalCfg(
     env=EnvCfg(
         env_type="genmanip",
         env_settings=GenmanipEnvSettings(
-            dataset_path="/oss-yeqianyu/datasets/Learn_Bench_Instruction",
+            dataset_path="/PATH/TO/YOUR/DATA/Learn_Bench_Instruction",
             eval_tasks=["instruction_16_1"],
-            res_save_path="/root/grmanipulation/Data/gr00t_n15_on_genmanip",
+            res_save_path="/PATH/TO/YOUR/EVAL_RESULTS",
             is_save_image=True,
             camera_enable=CameraEnable(realsense=True, obs_camera=True, obs_camera_2=True),
             depth_obs=False,

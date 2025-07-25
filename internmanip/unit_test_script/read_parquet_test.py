@@ -1,6 +1,6 @@
 import pandas as pd
 
-parquet_file_path = '/mnt/petrelfs/zhouyunsong/zhouys/data/Sweep/data/chunk-000/episode_000000.parquet'
+parquet_file_path = '/PATH/TO/YOUR/data/Sweep/data/chunk-000/episode_000000.parquet'
 
 try:
     # Read the parquet file into a pandas DataFrame

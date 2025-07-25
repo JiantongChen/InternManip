@@ -6,7 +6,7 @@ eval_cfg = EvalCfg(
     eval_type="simpler",
     agent=AgentCfg(
         agent_type="gr00t_n15",
-        model_name_or_path="/oss-yeqianyu/models/gr00t-n15-Google-bs16-node2-acc8-float32-max40k/checkpoint-40000",
+        model_name_or_path="/PATH/TO/YOUR/GR00T_N15_FINETUNED_CHECKPOINT",
         agent_settings={
             "policy_setup": "google_robot",
             "action_scale": 1.0,

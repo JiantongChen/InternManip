@@ -22,7 +22,6 @@ from transformers.feature_extraction_utils import BatchFeature
 
 import internmanip
 
-# /mnt/petrelfs/houzhi/Code/grmanipulation/grmanipulation/model/backbone/eagle2_hg_model/inference_eagle_repo.py
 from internmanip.model.backbone.eagle2_hg_model.inference_eagle_repo import reshape_model_embeddings
 
 from .eagle2_hg_model.inference_eagle_repo import EagleProcessor, ModelSpecificValues
@@ -235,7 +234,6 @@ class EagleBackbone1_5(nn.Module):
         super().__init__()
         assert not reproject_vision, "Reproject vision is not implemented here, set to False"
 
-        # DEFAULT_EAGLE_PATH= '/mnt/petrelfs/houzhi/Code/Isaac-GR00T/gr00t/model/backbone/eagle2_hg_model'
         config = AutoConfig.from_pretrained(DEFAULT_EAGLE_PATH, trust_remote_code=True)
         self.eagle_model = AutoModel.from_config(config, trust_remote_code=True)
 

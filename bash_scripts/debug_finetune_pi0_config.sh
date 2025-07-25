@@ -1,6 +1,5 @@
 #!/bin/bash
 # **The recommended finetuning configurations is to boost your batch size to the max, and train for 20k steps.**
-#cd /mnt/petrelfs/houzhi/Code/grmanipulation
 
 env
 

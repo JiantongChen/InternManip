@@ -9,7 +9,7 @@ from internmanip.configs.dataset.data_config import DATA_CONFIG_MAP
 REPO_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(REPO_PATH, ".internmanip/demo_data/sweep.PickNPlace")
 # DATA_PATH = os.path.join(REPO_PATH, "demo_data/robot_sim_converted.PickNPlace")
-# DATA_PATH = "/mnt/petrelfs/zhouyunsong/zhouys/data/Sweep"
+# DATA_PATH = "/PATH/TO/YOUR/data/Sweep"
 print("Loading dataset... from", DATA_PATH)
 
 # 从配置文件获取modality配置

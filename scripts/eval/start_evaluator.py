@@ -2,7 +2,7 @@
 This script is used to start the evaluator pipeline.
 
 Usage:
-python scripts/eval/start_evaluator.py --config run_configs/eval/seer_on_calvin.py [--distributed] [--server]
+python scripts/eval/start_evaluator.py --config run_configs/eval/pi0_on_simpler_widowx.py [--distributed] [--server]
 
 Options:
     --config: the path to the eval config file
@@ -33,7 +33,7 @@ def main():
         "--config",
         type=str,
         required=True,
-        help="eval config file path, e.g. run_configs/eval/openvla_on_simpler.py"
+        help="eval config file path, e.g. run_configs/eval/pi0_on_simpler_widowx.py"
     )
     parser.add_argument(
         "--distributed",

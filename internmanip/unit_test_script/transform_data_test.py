@@ -4,9 +4,9 @@ import numpy as np
 import os # Import os module
 
 # Define base directories and modality JSON path
-input_base_dir = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim.PickNPlace/data/'
-output_base_dir = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim_converted.PickNPlace/data/'
-modality_json_path = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim.PickNPlace/meta/modality.json'
+input_base_dir = '/PATH/TO/YOUR/DATA/robot_sim.PickNPlace/data/'
+output_base_dir = '/PATH/TO/YOUR/DATA/robot_sim_converted.PickNPlace/data/'
+modality_json_path = '/PATH/TO/YOUR/DATA/robot_sim.PickNPlace/meta/modality.json'
 
 try:
     # Load the modality JSON file

@@ -7,7 +7,7 @@ eval_cfg = EvalCfg(
     eval_type="simpler",
     agent=AgentCfg(
         agent_type="dp",
-        model_name_or_path="/mnt/inspurfs/ebench_t/houzhi/Checkpoints/runs/debug_dp-env/checkpoint-10/",
+        model_name_or_path="/PATH/TO/YOUR/DP_FINETUNED_CHECKPOINT",
         model_cfg=DiffusionConfig(),
         agent_settings={
             "policy_setup": "google_robot",

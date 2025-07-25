@@ -29,7 +29,6 @@ from transformers.feature_extraction_utils import BatchFeature
 
 import internmanip
 
-# /mnt/petrelfs/houzhi/Code/grmanipulation/grmanipulation/model/backbone/eagle2_hg_model/inference_eagle_repo.py
 from internmanip.model.backbone.eagle2_hg_model.conversation_repo import get_conv_template
 # internmanip.model.backbone.eagle2_hg_model.inference_eagle_repo
 # internmanip.model.backbone.eagle2_hg_model.inference_eagle_repo

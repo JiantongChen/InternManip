@@ -4,9 +4,9 @@ import os
 from collections import OrderedDict # Import OrderedDict
 
 # Define file paths
-modality_json_path = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim_converted.PickNPlace/meta/modality.json'
-stats_json_path = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim_converted.PickNPlace/meta/stats.json'
-output_stats_json_path = '/mnt/workspace/zhouys/Git_repos/GRU/grmanipulation/grmanipulation/demo_data/robot_sim_converted.PickNPlace/meta/stats_1.json'
+modality_json_path = '/PATH/TO/YOUR/DATA/robot_sim_converted.PickNPlace/meta/modality.json'
+stats_json_path = '/PATH/TO/YOUR/DATA/robot_sim_converted.PickNPlace/meta/stats.json'
+output_stats_json_path = '/PATH/TO/YOUR/DATA/robot_sim_converted.PickNPlace/meta/stats_1.json'
 
 try:
     # Load the modality JSON file

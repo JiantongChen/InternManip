@@ -1,5 +1,5 @@
 model_type: dp_clip
-dataset_path: /mnt/petrelfs/share_data/zhouyunsong/Sweep/
+dataset_path: /PATH/TO/YOUR/DATA/Sweep/
 num_gpus: 1
 batch_size: 16
 output_dir: Checkpoints/runs/debug-pi0

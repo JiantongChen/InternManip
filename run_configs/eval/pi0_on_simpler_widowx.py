@@ -7,7 +7,7 @@ eval_cfg = EvalCfg(
     eval_type="simpler",
     agent=AgentCfg(
         agent_type="pi0",
-        model_name_or_path="/mnt/inspurfs/ebench_t/houzhi/Checkpoints/runs/pi0_windowx_node2_bs16_acc8_meanstd_new1/checkpoint-20000",
+        model_name_or_path="/PATH/TO/YOUR/PI0_FINETUNED_CHECKPOINT",
         model_cfg=PI0Config(),
         agent_settings={
             "policy_setup": "widowx_bridge",

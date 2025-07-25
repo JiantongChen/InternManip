@@ -7,7 +7,7 @@ eval_cfg = EvalCfg(
     eval_type="simpler",
     agent=AgentCfg(
         agent_type="gr00t_n1",
-        model_name_or_path="/mnt/inspurfs/ebench_t/houzhi/Checkpoints/runs/debug-gr00t-1_googlerobot/checkpoint-10/",
+        model_name_or_path="/PATH/TO/YOUR/GR00T_FINETUNED_CHECKPOINT",
         agent_settings={
             "policy_setup": "google_robot",
             "action_scale": 1.0,
@@ -37,7 +37,7 @@ eval_cfg = EvalCfg(
 
             ]
     ),
-    logging_dir=f"/mnt/inspurfs/ebench_t/logs/eval/simpler",
+    logging_dir=f"{Path(__file__).absolute().parents[2]}/logs/eval/simpler",
     distributed_cfg=DistributedCfg(
         num_workers=4,
         ray_head_ip="10.150.91.18", # or "auto"

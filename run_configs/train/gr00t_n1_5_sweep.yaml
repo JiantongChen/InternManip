@@ -1,5 +1,5 @@
 model_type: gr00t_n1
-dataset_path: /mnt/petrelfs/share_data/zhouyunsong/Sweep/
+dataset_path: /PATH/TO/YOUR/DATA/Sweep/
 num_gpus: 1
 batch_size: 16
 output_dir: Checkpoints/runs/debug-gr00t-n1

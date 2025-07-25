@@ -36,10 +36,10 @@ python scripts/eval_policy.py --host localhost --port 5555 --plot
     --trajs 10
     --action_horizon 16
     --video_backend torchvision_av
-    --dataset_path /fs-computility/efm/shenyanqing/Isaac-GR00T/Banana_Real_Data
+    --dataset_path /PATH/TO/YOUR/DATA/Isaac-GR00T/Banana_Real_Data
     --embodiment_tag new_embodiment
     --data_config franka_gripper
-    --model_path /fs-computility/efm/shenyanqing/Isaac-GR00T/Checkpoints/runs/finetune_7state_1ksim240_8gpu_bs32_20000steps_0508_240stats/checkpoint-20000
+    --model_path /PATH/TO/YOUR/GR00T_FINETUNED_CHECKPOINT
 """
 
 if __name__ == "__main__":

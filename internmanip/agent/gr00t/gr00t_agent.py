@@ -243,7 +243,6 @@ class Gr00t_N1_Agent(BaseAgent):
             observations = unsqueeze_dict_values(observations)
 
         # normalized_input = unsqueeze_dict_values # ?
-        # Apply transforms /mnt/inspurfs/ebench_t/houzhi/Checkpoints/runs/debug-gr00t-1_windowx/checkpoint-10/
         normalized_input = self.apply_transforms(observations)
         normalized_action = self._get_action_from_normalized_input(normalized_input)
         unnormalized_action = self._get_unnormalized_action(normalized_action)
