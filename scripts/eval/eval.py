@@ -45,28 +45,20 @@ def calc_mse_for_single_trajectory(
     action_horizon=16,
     plot=False,
 ):
-    state_joints_across_time = []
     gt_action_joints_across_time = []
     pred_action_joints_across_time = []
     for step_count in range(steps):
         data_point = dataset.get_step_data(traj_id, step_count)
 
-        # NOTE this is to get all modality keys concatenated
-        # concat_state = data_point[f"state.{modality_keys[0]}"][0]
-        # concat_gt_action = data_point[f"action.{modality_keys[0]}"][0]
-        # concat_state = np.concatenate(
-        #     [data_point[f"state.{key}"][0] for key in modality_keys], axis=0
-        # )
         concat_gt_action = np.concatenate(
             [data_point[f"action.{key}"][0] for key in modality_keys], axis=0
         )
 
-        # state_joints_across_time.append(concat_state)
         gt_action_joints_across_time.append(concat_gt_action)
 
         if step_count % action_horizon == 0: 
             print("inferencing at step: ", step_count)
-            action_chunk = policy.get_action(data_point) # policy的action是 去过归一化的
+            action_chunk = policy.get_action(data_point)
             for j in range(action_horizon):
                 # NOTE: concat_pred_action = action[f"action.{modality_keys[0]}"][j]
                 # the np.atleast_1d is to ensure the action is a 1D array, handle where single value is returned
@@ -80,7 +72,6 @@ def calc_mse_for_single_trajectory(
                 pred_action_joints_across_time.append(concat_pred_action)
 
     # plot the joints
-    # state_joints_across_time = np.array(state_joints_across_time)
     gt_action_joints_across_time = np.array(gt_action_joints_across_time)
     pred_action_joints_across_time = np.array(pred_action_joints_across_time)[:steps]
     assert (
@@ -97,7 +88,6 @@ def calc_mse_for_single_trajectory(
     indices = np.arange(steps)
     for i in range(action_horizon):
         mask = (indices % action_horizon) == i
-        # 对这些位置的损失求和
         group_loss = np.mean(se[mask])
         mse_.append(group_loss)
 
@@ -116,7 +106,6 @@ def calc_mse_for_single_trajectory(
         )
 
         for i, ax in enumerate(axes):
-            # ax.plot(state_joints_across_time[:, i], label="state joints")
             ax.plot(gt_action_joints_across_time[:, i], label="gt action joints")
             ax.plot(pred_action_joints_across_time[:, i], label="pred action joints")
 
@@ -135,7 +124,5 @@ def calc_mse_for_single_trajectory(
         )
         os.makedirs(save_dir, exist_ok=True)
         plt.savefig(os.path.join(save_dir, f"{traj_id}.png"))
-
-        # plt.show()
 
     return mse, mse_
