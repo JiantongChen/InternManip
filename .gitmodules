@@ -1,0 +1,10 @@
+[submodule "internmanip/benchmarks/genmanip/utils/InternUtopia"]
+	path = internmanip/benchmarks/genmanip/utils/InternUtopia
+	url = https://github.com/InternRobotics/InternUtopia.git
+[submodule "internmanip/benchmarks/calvin"]
+	path = internmanip/benchmarks/calvin
+	url = https://github.com/mees/calvin.git
+[submodule "internmanip/benchmarks/SimplerEnv"]
+	path = internmanip/benchmarks/SimplerEnv
+	url = https://github.com/tianshihan818/SimplerEnv.git
+	branch = main
