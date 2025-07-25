@@ -6,7 +6,7 @@ from scipy.spatial.transform import Rotation as R
 
 from internutopia.core.robot.robot import BaseRobot
 from internutopia.core.scene.scene import IScene
-from internutopia.core.robot.articulation import IArticulation
+from internutopia.core.robot.isaacsim.articulation import IsaacsimArticulation
 
 from .actions import validate_action
 from ..config.task_config import FrankaRobotiqRobotCfg
@@ -21,7 +21,7 @@ class FrankaRobotiq(BaseRobot):
         self.prim_path = config.prim_path
         self._robot_scale = np.array([1.0, 1.0, 1.0])
         
-        self.articulation = IArticulation.create(
+        self.articulation = IsaacsimArticulation.create(
             usd_path=config.usd_path,
             prim_path=self.prim_path,
             name=config.name,
@@ -37,6 +37,11 @@ class FrankaRobotiq(BaseRobot):
     def post_reset(self):
         super().post_reset()
         self._robot_ik_base = self._rigid_body_map[self.prim_path + '/robotiq/arm/panda_link0']
+        self.articulation.set_gains(
+            kps=[572957800.0, 572957800.0, 572957800.0, 572957800.0, 572957800.0, 572957800.0, 572957800.0], 
+            kds=[5729578.0, 5729578.0, 5729578.0, 5729578.0, 5729578.0, 5729578.0, 5729578.0],
+            joint_indices=[0, 1, 2, 3, 4, 5, 6]
+        )
 
     def apply_action(self, action):
         """

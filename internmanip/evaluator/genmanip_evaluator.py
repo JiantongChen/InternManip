@@ -66,7 +66,7 @@ class GenmanipEvaluator(Evaluator):
     @classmethod
     def _get_all_episodes_setting_data(cls, config):
         if config.env.env_settings.dataset_path is None:
-            dataset_path = snapshot_download("OpenRobotLab/InternBench-M1", repo_type="dataset")
+            dataset_path = snapshot_download("InternRobotics/InternBench-M1", repo_type="dataset")
         else:
             dataset_path = config.env.env_settings.dataset_path
 
